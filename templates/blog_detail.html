@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<h2> {{blog.title}} </h2>
+<p> {{blog.body}} </p>
+
+<sub> Posted On: {{blog.date}} </sub>
+<br>
+<sub> Posted By: {{blog.author}} </sub>
+
+<br> <br>
+
+<a href="{%url 'blog_update' blog.pk%}"> -Update this Post </a>
+<br> <br>
+<a href="{%url 'blog_delete' blog.pk%}"> -Delete this Post </a>
+<br> <br>
+
+
+
+{%endblock content%}

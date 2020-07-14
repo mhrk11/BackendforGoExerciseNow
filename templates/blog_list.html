@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+
+{%for post in blogs_list%}
+<a href="{%url 'blog_detail' post.pk %}"> <h4> {{post.title}} - <span> {{post.author}} </span> </h4> </a>
+<p> {{post.body}} </p>
+<span> {{post.date}} </span>
+{%endfor%}
+
+{%endblock content%}

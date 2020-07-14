@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title> Go. Exercise. Now. </title>
+</head>
+<body>
+    <header>
+        <a href="{%url 'home'%}"> Home </a>
+        <br>
+        <nav>
+            {%if user.is_authenticated%}
+               <h6> Hi {{user.username}} </h6>
+
+            <span><a href="{%url 'logout'%}"> Log Out </a> </span>
+
+            {%else%}
+            <p> Not Logged In </p>
+            <a href="{%url 'login'%}"> LogIn </a>
+            <br>
+            <a href="{%url 'signup' %}"> SignUp </a>
+            {%endif%}
+
+
+</nav>
+</header>
+
+
+
+
+{%block content%}
+{%endblock content%}
+</body>
+
+</html>
+
+
+
+
